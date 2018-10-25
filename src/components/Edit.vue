@@ -14,11 +14,11 @@
           <input class="form-control" id="add-nom" v-model="newLib.nom" required/>
         </div>
         <div class="form-group">
-          <label for="add-description">Description</label>
+          <label for="add-description">Description :</label>
           <textarea class="form-control" id="add-categorie" rows="10" v-model="newLib.categorie"></textarea>
         </div>
          <div class="form-group">
-          <label for="add-installation">Installation</label>
+          <label for="add-installation">Installation :</label>
           <textarea class="form-control" id="add-installation" rows="10" v-model="newLib.installation"></textarea>
         </div>
         <button type="submit" class="btn btn-primary">Valider</button>

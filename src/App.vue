@@ -38,4 +38,8 @@ export default {
   a:hover{
     color: lightgray;
   }
+  a:active {
+    color: white;
+  }
+
 </style>

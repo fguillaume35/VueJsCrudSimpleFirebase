@@ -1,7 +1,7 @@
 <template>
       <nav class="navbar bg-primary navbar-dark navbar-expand-lg">
           <div class="container">
-            <router-link class="navbar-brand" style="font-size:40px" to="/">Framework et librairies javascript</router-link>
+            <p style="font-size: 40px;float:left;padding:20px;line-height:20px;height:50px">Framework et librairies javascript</p>
             <div class="collapse navbar-collapse" style="margin-top:22px" id="navbarNav">
                 <ul class="navbar-nav">
                 <li class="nav-item active">
