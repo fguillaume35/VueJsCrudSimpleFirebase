@@ -17,6 +17,11 @@ var AppVue = new Vue({
   components: { App },
   template: '<App/>'
 });
+$(document).ready(function(){
+    $("#myBtn").click(function(){
+        $("#myModal").modal();
+    });
+});
 
 
 

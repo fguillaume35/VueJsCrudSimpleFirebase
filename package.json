@@ -12,7 +12,8 @@
   "dependencies": {
     "bootstrap-sass": "^3.3.7",
     "firebase": "^5.5.5",
-    "jquery": "^2.2.4",
+    "jquery": "^3.0.0",
+    "popper.js": "^1.14.4",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1",
     "vuefire": "^1.4.5"

@@ -1,8 +1,8 @@
 
 <template id="Listing">
-  <div  >
+  <div>
     <div class="actions" >
-      <router-link class="btn btn-info" :to="{name:'edit', params:{id:0}}"  ><i  class="fa fa-plus"> Ajouter</i></router-link>
+      <router-link class="btn btn-info" :to="{name:'edit', params:{id:0}}" id="ajout"  ><i  class="fa fa-plus"> Ajouter</i></router-link>
     </div>
     <div class="filters row">
       <div class="form-group col-sm-3">
@@ -25,17 +25,23 @@
         </td>
         <td>{{ lib.categorie }}</td>
         <td>
-      <router-link class="btn btn-info btn-xs" :to="{name:'edit', params: {id: lib['.key']}}">Edition</i></router-link>
-          <button v-on:click="deleteItem(lib['.key'])" class="btn btn-danger btn-xs">Suppression</a>
+          <router-link class="btn btn-info btn-xs" :to="{name:'edit', params: {id: lib['.key']}}">Edition</i></router-link>
+          <button class="btn btn-danger btn-xs" v-on:click="deleteItem(lib['.key'])" id="myBtn">Suppression</button>
         </td>
       </tr>
       </tbody>
     </table>
   </div>
+
+  
 </template>
 
 <script>
 import { db } from '../config/db';
+import jQuery from 'jquery';
+window.jQuery = window.$ = jQuery;
+require('bootstrap-sass');
+
 let libsRef = db.ref('libs');
 
 export default {
@@ -63,8 +69,11 @@ export default {
   },
 
   methods: {
+
     deleteItem(key) {
-      this.$firebaseRefs.libs.child(key).remove();
+       if (confirm("Supprimer cet élément?")) {
+        this.$firebaseRefs.libs.child(key).remove();
+       }
     }
   }
 }

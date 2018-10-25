@@ -5,6 +5,11 @@ import Listing from '@/components/Listing'
 import VueFire from 'vuefire'
 Vue.use(Router)
 Vue.use(VueFire)
+$(document).ready(function(){
+    $("#myBtn").click(function(){
+        $("#myModal").modal();
+    });
+});
 export default new Router({
   routes: [
     {

@@ -30,7 +30,7 @@
 <script>
 import { db } from '../config/db';
 let libsRef = db.ref('libs');
- 
+
 export default {
   name: 'Edit',
   firebase: {
