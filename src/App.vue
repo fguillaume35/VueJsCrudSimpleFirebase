@@ -1,25 +1,7 @@
 <template>
   <div class="container" id="app">
     <header class="page-header">
-      <nav class="navbar navbar-light bg-light navbar-expand-lg">
-          <div class="container">
-          <router-link class="navbar-brand" style="font-size:40px" to="/">Framework et librairies javascript</router-link>
-
-          <div class="collapse navbar-collapse" style="margin-top:22px" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item active">
-                <router-link :to="{ name: 'listing' }" class="nav-link">Accueil</router-link>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Mémo</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Nouveautés</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+      <Navbar/>
     </header>
     <div class="container">
       <router-view/>
@@ -28,18 +10,18 @@
 </template>
 
 <script>
-
+import Navbar from '@/components/Navbar'
 export default {
-  name: 'App'
+  name: 'App',
+  components:{
+    Navbar
+  }
 }
 </script>
 
 <style lang="scss">
   @import 'src/assets/scss/design.scss';
-  .gap {
-    margin-top: 50px;
-  }
-    h1, h2 {
+  h1, h2 {
     font-weight: normal;
   }
   ul {
@@ -51,6 +33,9 @@ export default {
     margin: 0 10px;
   }
   a {
-    color: black;
+    color: white;
+  }
+  a:hover{
+    color: lightgray;
   }
 </style>
